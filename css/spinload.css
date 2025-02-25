@@ -1,0 +1,46 @@
+/* 3. Preloader */
+#preloader {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ef6a8a; /* Màu nền có thể thay đổi */
+	z-index: 9999999; /* Đảm bảo luôn hiển thị trên cùng */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* Spinner (loading animation) */
+.spinner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 60px; /* Tăng kích thước để dễ thấy hơn trên điện thoại */
+	height: 40px;
+}
+
+/* Các thanh chữ nhật chuyển động */
+.spinner > div {
+	background-color: #fff;
+	height: 100%;
+	width: 6px;
+	margin: 0 2px;
+	display: inline-block;
+	border-radius: 3px; /* Bo góc để đẹp hơn */
+	animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+/* Điều chỉnh độ trễ để tạo hiệu ứng sóng */
+.spinner .rect1 { animation-delay: -1.2s; }
+.spinner .rect2 { animation-delay: -1.1s; }
+.spinner .rect3 { animation-delay: -1.0s; }
+.spinner .rect4 { animation-delay: -0.9s; }
+.spinner .rect5 { animation-delay: -0.8s; }
+
+/* Animation */
+@keyframes stretchdelay {
+	0%, 40%, 100% { transform: scaleY(0.4); }
+	20% { transform: scaleY(1.0); }
+}

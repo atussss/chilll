@@ -1,0 +1,108 @@
+.content {
+  position: relative;
+  z-index: 3;
+}
+
+/* Căn chỉnh vị trí nút "Có" & "Không" */
+#no, #yes {
+  position: absolute;
+  display: inline-block;
+  top: 40vh;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+#no {
+  left: 35%;
+  background-color: #ff4d4d;
+  color: white;
+}
+
+#yes {
+  left: 65%;
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Hiệu ứng hover */
+#no:hover {
+  background-color: #ff6666;
+  transform: scale(1.1);
+}
+
+#yes:hover {
+  background-color: #66bb6a;
+  transform: scale(1.1);
+}
+
+/* Ảnh nền */
+#bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0.85;
+  background-repeat: no-repeat;
+  background-image: url(../img/puung3.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px); /* Giảm blur để ảnh nhìn rõ hơn */
+  z-index: 0;
+}
+
+/* SweetAlert2 - Tuỳ chỉnh hộp thoại */
+.swal2-title, .swal2-content {
+  color: red !important;
+  font-family: 'Pacifico', cursive;
+}
+
+.swal2-popup {
+  border-radius: 15px !important;
+  padding: 20px;
+}
+
+/* Header */
+header h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h4 {
+  font-family: 'Pacifico', cursive;
+  text-align: center;
+}
+
+/* Responsive cho mobile */
+@media only screen and (max-width: 500px) {
+  header h2 {
+      font-size: 45px;
+      margin-bottom: 20px;
+  }
+
+  header h4 {
+      padding: 10px;
+  }
+
+  /* Điều chỉnh vị trí nút trên điện thoại */
+  #no {
+      left: 10%;
+      top: 45vh;
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+
+  #yes {
+      left: 55%;
+      top: 45vh;
+      font-size: 14px;
+      padding: 8px 15px;
+  }
+}
